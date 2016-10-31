@@ -28,5 +28,8 @@ These results are:
   - it is possible to introduce semantic restrictions for the attributes of relationships and for the arguments and values of functions
   
 ### The first stage of SW project (2001- 2004)
+RDF + RDFS => OWL (Onthology Web Language, 2004).
+During last 12 years this language has been used as the principle tool for developing onthologies. A big family of web-based onthologies in many domains has been created.
 
+### A possible look at the current state of Big Data Systems
 
