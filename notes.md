@@ -32,4 +32,17 @@ RDF + RDFS => OWL (Onthology Web Language, 2004).
 During last 12 years this language has been used as the principle tool for developing onthologies. A big family of web-based onthologies in many domains has been created.
 
 ### A possible look at the current state of Big Data Systems
+[pic1 here]
+LOD is a big data system , it can be imagined as a huge marked graph formed by elementary graphs representing RDF-triples (see pic1).
+One of the main components of LOD is DBpedia, it has been auto. constructed by means of extracting semantic relations from wikipedia.
 
+### The central Ideas of first order logic (FOL) approach to representic information
+FOL is the central theory of mathematical logic.
+FOL was the starting point for the Semantic Web project.
+In partticular, the RDF triples ase equivalent to atomic formula of FOL.
+Example:
+RDF - (Leo Tolstoy, Authorship, War and Peace)
+FOL - Authorship(Leo Tolstoy, War and Peace)
+
+More detailes about the influence of FOL on SW project 
+FOL => Terminological knowledge representation language (developed in AI theory)=> Description Logics => The languages RDF, RDFS, OWL, the algorithms of process. knowl. presented by this 
