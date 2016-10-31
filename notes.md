@@ -18,9 +18,15 @@ The central idea was to reach these objectives mainly with the help of
 
 This task statements based on th results obtained during the preliminary stage of SW process (second half of the 1990s).
 These results are:
-- resource description framework (RDF) - it is interpreted as the simpliest information language for developing distributed databases and knowledge banks.
+- resource description framework (RDF) - it is interpreted as the simpliest information language for developing distributed databases and knowledge banks. The main data structure of RDF is triples of the form (A, B, C) where 
+  - A is subject
+  - B is predicate
+  - C is object
+- the language system RDF Schema (aka RDFS) in 1997-1999.
+  - the ways of defining subclasses of objects 
+  - it is possible to define a vocabulary of an application domain
+  - it is possible to introduce semantic restrictions for the attributes of relationships and for the arguments and values of functions
+  
+### The first stage of SW project (2001- 2004)
 
-The main data structure of RDF is triples of the form (A, B, C) where 
-- A is subject
-- B is predicate
-- C is object
+
