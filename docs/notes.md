@@ -137,4 +137,90 @@ $p: Z^n -> {true, false}$
 
 Example 1: Let Z the set of all people and the function Boss is defined as follows: for every a, b in Z (where a != b) Boss(a,b) = true <=> there is an organisation C such that b is a chief of a in organisation C => Boss is a binary predicate on the set of all people
 
+[the second lecture is missed]
+
+### 2.7 The class of firs-order languages
+
+### 2.8 A method of representing a meaning of a natural language text as a formula of FOL
+Definition from theoretial linguistics and AI theory: a semantic role is a relation between a meaning of a verbal form (verb, infinitive, gerund, etc.) and a meaning of a word combination (or a word) _depending in a sentence_ on this verbal form.
+Example: Let T1 = "Anton has switched off the computer." 
+- (has switched off, Anton) is a relation called Agent
+- (has switched off, computer) is a relation called Object
+One says that the semantic roles Agent and object a explicitly realised in T1.
+
+The notion 'semantic role' has several synonyms:
+- deep case (1968) ("глубинный падеж")
+- conceptual case
+- semantic case
+- thematic role
+
+Computational linguistics includes a special branch called Semantic Role Labelling. The objective is to develop the methods of discovering possible semantic roles realised in the pairs of the form (verb form, dependent word combination or a word). 
+
+
+Definition from theoretical and computational linguistics: let Expr be an expression in natural language (NL). Then a formal structure Semrepr is called a possible semantic representation (SR) of Expr in case the formal structure Semrepr is composed by semantic units informational units) but not by the words and reflects semantic relations between the elements of Expr.
+
+This formal structure Semrepr may be a string or an array of stings, a textual file, a marked graph (a semantic net), etc.
+
+=> Consider the steps of building a possible semantic representation of a natural language text as a formula of FOL.  
+
+Let Disc1 (discourse) be "Robert Price developed alpha technology in the year 2012. As a consequence he became next year a vice president of a company Rainbow."
+Step 1: We introduce the marks of different entities mentioned in the considered text. Formally, theses marks are variables. 
+e1 - the mark of the event 'developing alpha technology'
+e2 - the mark of the event 'recieving a working position' 
+x1 - the person Robert Price
+x2 - the technology called 'alpha technology'
+x3 - the company Rainbow
+t2 - the time of the event e2
+
+Step 2: We define the set of constants Const: "robert", "Price", "Rainbow", 2012/year, person, development1, recieving-working-position, technology, company1, "aplha-technology"
+
+Step 3: We introduce the set of functional symbols F and the set of predicate symbols.
+Let F = {NextYear}
+Pred = {Sem-descr, Agent, New-product, Time, Name, Surname, Name1, Working-position, Part-time
+Let's believe that Pred contains binary predicates.
+
+Step 4: We construct atomic formula reflecting sertain pieces of the text's meaning.
+Cause(e1, e2),
+Sem-descr(e1, development1),
+Agent(e1, x1), 
+Sem-descr(x1, person),
+Name(x1, "Robert"),
+Surname(x1, "Price"), 
+New-product(e1, x2), 
+Sem-descr(x2, technology),
+Time(x1, t1),
+Part-time(t1, 2012/year),
+Name1(x2, "aplha-technology")
+
+=> now we do have the components for reflecting the meaning of the first sentence.
+=> Let's act in a similar way for the second sentence. 
+Sem-descr(e2, recieving position),
+Agent(e2,x1)
+Working-position(e2, vice-president)
+Organisation(e2, x3)
+( => include Organisation into the set Predicates)
+Sem-descr(x3, company1)
+Name1(x3, "Rainbow")
+Time(e2, t2)
+Part-time(t2, NextYear(2012/year))
+
+=> Very likely we do have all components for constructing a formula being a possible semantic representation of Disc1.
+The prepared atomic formulas are used for constructing a possible SR of the given text. 
+
+=> see an electronuc guide illustrating step 5 for the text Disc1. 
+
+=> Home task1 preliminary: construct a SR of the considered discourse Disc1. 
+Remark 1: please pay attention to small differences in atomoc formulas considered during the lecture and in the electronic guide. 
+Remark 2: please finf a typing error in SR of Disc1 in the electronic guide (the bottom of last page). 
+
+In particular the formula Cause(e1, e2) is default (?) 
+
+HW: print on paper!!! page 1 is a title page
+Deadline: 28.11
+Consulting: 21.11
+
+HW: Invent a discourse containing 2 or 3 sentences (like Disc1). It should pertain to a real fiels of professioanl activity. The invented discourse is to describe 2 or more events. There are casual and time relations between these events. 
+Objective 1: define a logical basis LogBS fro buildin a semantic representation of the considered text. 
+Objective 2: construct a formula  Sem-repr from (Formulas(LogBS)) being a possible SR of your discourse. 
+
 
