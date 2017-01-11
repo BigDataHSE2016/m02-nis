@@ -1,0 +1,223 @@
+% hsenlptemplate.tex (Version 2.0)
+% ===============================================================================
+% NATIONAL RESEARCH UNIVERSITY HIGHER SCHOOL OF ECONOMICS NLP Course HW LaTeX template.
+% 2016; Natalia Khapaeva, Higher School of Economics
+% Licence type: Free as defined in the GNU General Public Licence: http://www.gnu.org/licenses/gpl.html
+
+\documentclass[a4paper,12pt,fleqn]{article}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{paralist}
+
+% Insert your course information here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\institution}{National Research University Higher School of Economics}
+\newcommand{\titlehd}{RESEARCH SEMINAR}
+\newcommand{\examtype}{First Semester, Master program "Bid Data System"”}
+\newcommand{\examdate}{November 2016}
+\newcommand{\examcode}{Homework 1}
+\newcommand{\readtime}{Natalia Khapaeva}
+\newcommand{\writetime}{Vladimir A. Fomichov,\\Ph.D., Doctor of Technical Sciences}
+\newcommand{\lastwords}{End of Homework}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\setcounter{MaxMatrixCols}{10}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+
+% ANU Exams Office mandated margins and footer style
+\setlength\parindent{0pt}
+\setlength{\topmargin}{0cm}
+\setlength{\textheight}{9.25in}
+\setlength{\oddsidemargin}{0.0in}
+\setlength{\evensidemargin}{0.0in}
+\setlength{\textwidth}{16cm}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{\footnotesize{Page \thepage \ of \pageref{finalpage} -- \titlehd \ (\examcode)}}
+\rfoot{}
+
+% DEPRECATED: ANU Exams Office mandated margins and footer style
+%\setlength{\topmargin}{0cm}
+%\setlength{\textheight}{9.25in}
+%\setlength{\oddsidemargin}{0.0in}
+%\setlength{\evensidemargin}{0.0in}
+%\setlength{\textwidth}{16cm}
+%\pagestyle{fancy}
+%\lhead{} %left of the header
+%\chead{} %center of the header
+%\rhead{} %right of the header
+%\lfoot{} %left of the footer
+%\cfoot{} %center of the footer
+%\rfoot{Page \ \thepage \ of \ \pageref{finalpage} \\
+%       \texttt{\examcode}} %Print the page number in the right footer
+
+\renewcommand{\headrulewidth}{0pt} %Do not print a rule below the header
+\renewcommand{\footrulewidth}{0pt}
+
+
+\begin{document}
+
+% Title page
+
+\begin{center}
+%\vspace{5cm}
+\large\textbf{\institution}
+\end{center}
+\vspace{1cm}
+
+\begin{center}
+\textit{ \examtype -- \examdate}
+\end{center}
+\vspace{1cm}
+
+\begin{center}
+\large\textbf{\titlehd}
+\end{center}
+
+\begin{center}
+\large\textbf{\examcode}
+\end{center}
+\vspace{4cm}
+
+\begin{center}
+\textit{Student: \readtime}
+\end{center}
+\begin{center}
+\textit{Supervisor:  \writetime}
+\end{center}
+\begin{center}
+\vfill
+MOSCOW\\
+2016\\
+\end{center}
+
+% End title page
+
+
+
+\newpage
+\begin{quote}
+\textit{\textbf{Deadline:} 28.11.2016\\
+Invent a discourse containing 2 or 3 sentences (like Disc1).\\
+It should pertain to a real field of professional activity. The invented discourse is to describe 2 or more events. There are casual and time relations between these events.\\
+\textbf{Objective 1:} Define a logical basis LogBS fro building a semantic representation of the considered text.\\
+\textbf{Objective 2:} construct a formula Semrepr from (Formulas(LogBS)) being a possible SR of your discourse.}
+\end{quote}
+\\
+\textbf{Disc:} In the 1970s Donald Chamberlin developed SEQUEL language. It was used for creation the PL/pgSQL language in 1998.\\
+
+\vspace{1cm}
+
+\textbf{Entities:}
+\begin{compactenum}
+\item \textit{e1} - the mark of the event "release of SEQUEL language"
+\item \textit{e2} - the mark of the event "release of PL/pgSQL language"
+\item \textit{x1} - the mark of the person "Donald Chamberlin"
+\item \textit{x2} - the mark of SQL language creation
+\item \textit{x3} - the mark of PL/pgSQL language creation
+\item \textit{t1} - the moment of e1
+\item \textit{t2} - the moment of e2
+\end{compactenum}
+
+\vspace{1cm}
+
+\textbf{Set of constants:}
+\begin{compactenum}
+\item \textit{Agent} - a designation of the semantic role realized in the fragment “Donald Chamberlin developed”
+\item \textit{New-idea} - a designation of the semantic role realized in the fragment “developed SEQUEL language”
+\item \textit{Time} - a designation of the semantic role realized in the fragments “In the 1970s ... developed”, “was used ... in 1998”
+\end{compactenum}
+
+\vspace{1cm}
+
+\textbf{Predicates}
+\begin{compactenum}
+\item person
+\item development
+\item creation
+\item 1970s/years
+\item "SEQUEL language"
+\item "PL/pgSQL language"
+\item Donald
+\item Chamberlin
+\item 1998/year
+\item language
+\end{compactenum}
+
+\vspace{1cm}
+
+\textbf{Binary predicates}
+\begin{compactenum}
+\item Sem-descr (e1, development)
+\item Sem-descr (e2, creation)
+\item Sem-descr (x1, person)
+\item Sem-descr (x2, development)
+\item Sem-descr (x3, "PL/pgSQL language")
+\item Name (x1, "Donald")
+\item Surname (x1, "Chamberlin")
+\item Name1(x2, "SEQUEL language development")
+\item Name1 (x3, "PL/pgSQL language creation")
+\end{compactenum}
+
+\vspace{1cm}
+
+So, a possible semantic representation (SR) of the first sentence can be constructed as the following formula Sem1: \\
+\begin{verbatim}
+(((Sem-descr(e1, development)
+    AND Time(e1, t1))
+    AND (Agent (e1, x1)
+    AND (Sem-descr(x1, person)))
+AND (Name(x1, "Donald")
+AND Surname (x1, "Chamberlin"))
+AND New-idea(e1, x2)
+AND (Sem-descr (x2, development)
+    AND Name1("SEQUEL language development")
+    AND Part-time(t1, 1970s)))
+\end{verbatim}
+
+Similarly, a possible semantic representation (SR) of the second sentence Sem2:\\
+\begin{verbatim}
+(((Sem-descr (e2, creation)
+        AND Time (e2, t2))
+    AND ((Sem-descr(x3, "PL/pgSQL language")
+        AND Part-time (t2, 1998))
+\end{verbatim}
+
+And possible SR of the discourse Disc1 can be constructed as the following formula Semrepr1: \\
+ Semrepr1 = \exists e1 \exists t1 \exists e2 \exists{t2} \exists{x1} \exists{x2} \exists{x3}
+ \exists{x4} (Sem1 AND Sem2)
+
+\begin{center}
+\vspace{3cm}
+--------- \textit{\lastwords} ---------
+\end{center}
+\\
+
+\label{finalpage}
+
+\end{document}

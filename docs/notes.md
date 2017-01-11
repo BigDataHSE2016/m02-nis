@@ -211,7 +211,7 @@ The prepared atomic formulas are used for constructing a possible SR of the give
 => see an electronuc guide illustrating step 5 for the text Disc1.
 
 => Home task1 preliminary: construct a SR of the considered discourse Disc1.
-Remark 1: please pay attention to small differences in atomoc formulas considered during the lecture and in the electronic guide.
+Remark 1: please pay attention to small differences in atomic formulas considered during the lecture and in the electronic guide.
 Remark 2: please finf a typing error in SR of Disc1 in the electronic guide (the bottom of last page).
 
 In particular the formula Cause(e1, e2) is default (?)
@@ -225,3 +225,138 @@ Objective 1: define a logical basis LogBS fro buildin a semantic representation 
 Objective 2: construct a formula  Sem-repr from (Formulas(LogBS)) being a possible SR of your discourse.
 
 [lection #3  should be here]
+
+### 3.4 The topicality of using NLP in Big Data Systems
+Let's consider the principal objectives of an international company "Expert System Semantic Intelligence" (founders are from Italy).
+
+//links here
+
+Rationale for using NLP in BDS:
+- Big date is largely unstructured in a state of permanent growth. It is also mostly text.
+NLP of Big data is the next great oppotunity. For example (stored textual information):
+  - customer and sales information
+  - transactional data
+  - external open-source information (in particular from social media)
+- NLP helps computers to understand not only simple words and word combinations but also sentences and discourses as they are spoken or written by a human. Regardless of the sector every business today relies on large volumes of textual information. For example, a law firm works with large volumes of past and ongoing legal transaction documents, notes, email correspondence as well as large volumes of governmental and specialied reference information. Example 2: A pharmacentical company has to deal with large volumes of clinical trial information and data, doctors' notes, patient information and data, patent and regulatory information as well as the latest research on competitors.
+
+Current applications of NLP:
+- smartphones assistances like Apple's Siri
+- intelligence interfaces in online banking
+- retail self-service tools
+
+The users ask questions in everyday language and recieve an immediate accurate answers.
+
+####  Nearest applications of NLP in BDS:
+##### Business intelligence
+NLP for Big data can be leveraged to automatically find relevant information and/or summarige of the content of the documents in large volumes of information for collective insights (see first web reference).
+
+##### Sentiment Analysis
+Sentiment Analysis (extraction of users' opinions).
+Social channels are a rich (though noisy) source of valuable information. Using NLP for sentiment analysis the companies can understand what is being said about their brands and products as well as how it is being talked about - how users feel about the service, product or concept idea.
+This is a powerful way to discover information about the market and current and potentional customers, opinions and information about customer habits, preferences, needs and wants as well as demographic information.
+This information can be than applied to product development, BI and market researches.
+
+##### Semantic technology Cogito.
+The company "Expert System Semantic Intelligence" has developed a semantic technology (it takes into account the meanings of words and sentences) called Cogito.
+
+Cogito leverages deep learning and AI algorythms for simulating how people understand language and in this way the system recognizes the meanings of words in context.
+
+(see the second web reference)
+
+Cogito understands that the text is about politics and econmics even if it doesn't contain the exact words but contains the related concepts.
+
+##### A distinguishing feature of semantic technology.
+Unlike keywords and statistics technologies all machine-learning and probabilistic algorithms approaches Cogito does not process a text as a string of characters without considering the concepts (the meanings) they express.
+Relying on a deep semantic analysis and the  constructed knowledge graph Cogito tries to understand a text as a person would.
+The same can be said about the algorithms of semantic parsing by Fomichov (see yellow book).
+
+### Homework 2
+Make a try to discover some intelligent abilities of the semantic technology [Cogito](http://www.intelligenceapi.com/demo/).
+Print your dialogs with Cogito (several pages, >= 2) and submit the printed texts on next Monday.  
+
+Remember that the theory of K-representations considers (introduces) 2 classes of formulas: l-formulas, t-formulas and y-formula.
+
+Only l-formulas and t-formulas are used as semantic representations of expressions in NL.
+Y-formulas are used for mathematical investigation of the properties of l-formulas and t-formulas.
+
+[missed part]
+Examples:
+- (space.ob, dyn.phys.ob) belong to Gen
+- (space.ob, space.ob) belong to Gen
+- (sit, event) belong to Gen
+- (real, natural) belong to Gen
+- (real, real) belong to Gen
+
+There is a simpler form for expressing  the same information:
+- space.ob -> dyn.phys.ob
+- space.ob -> space.ob
+- sit -> event
+- sit -> sit
+- real -> natural
+- real -> real
+
+Z^5 = X - a  - a countable set of symbols , this set is called a primary informational univers X\supset St.
+
+The elements of X are interpleted as primary informational units.
+Examples:
+
+(this function associates the set of all suppluers with the concrete entrprise )
+
+Theoretical home task:
+Grasp the interpretations of distinguished elements from the list Z1...Z15. These elements will be indicated in the email.
+Ch. 3 of the book.
+The first element is Z4 - Tol.
+
+2016-12-12
+### Shortly about a system of partial operations for constructing semantic representations of arbitrarily complex natural language sentences and discourses.
+
+This theme relates to text mining.
+
+A fundamental question is how the expr. of NL are organised on the level of structured meanngs (semantic level) and on semantic level.
+Practical significance of an answer to this question : we'll be able to represent the meaning of a search request  as an expression of a certain semantic language (intermediate level). Than we do the same with the meaning of an analysed fragment of a text stored on web (possibly in a different NL) => it would be possible to compare meaning1 (request) and meaning2 (fragment) and to take a desision about the usefullness of the analysed text.
+
+As far back as 50 years ago, the scientists had no reasonable answer to this fundamental question.
+
+The first mathematically complete answer was formulated in the paper "The mathematical model for describing structured items of conceptual level" by ????. This paper described a system consisting of 10 partial operations on concepual structures , in particular a new class of formal languages was defined: the class of restricted standard knowledge languages (RSK-languages). A modified version of this system of 10 partial operations is described in the monograph by Fomichov (2010).
+=> let's consider very short characteristics of 10 partial operations on conceptual structures.
+These operations enable us to build SRs of arbitrary complex NL-texts.
+
+For k = 1,...,10 the partial operations Op[k] is defined by a statement (called a rule) P[k].
+
+Op[1] allows to build l-formulas of the form
+```
+qtr conc,
+```
+where qtr is an intersional quantifier ( a semantic untit corresponding to the words and word combinations
+```
+arbitrary, any, a certain, all, several, etc.
+```
+), conc is a simple or compound designation of a notion.
+
+Examples:
+- certain person
+- certain textbook
+- all person
+- all textbook
+- certain person * (Coubtry, Russia)
+- certain textbook * (Level, high-school),(filed of knowledge, biology)
+
+Op[2] constructs l-formula of the form f(a1,..an), where n>=1, f is the designation of a function with n arguments and a1-an are the designations of the arguments.
+
+Examples:
+- Capital(Russia)
+- Number_of_inhab(Capital(Russia))
+- Suppliers(IBS)
+- Friends(P.Somov)
+- Price(certain car * (Manufacturer, BMW))
+
+
+Op[3] enables us to construct l-formulas (a1==a2) where a1, a2 are l-formulas.
+
+Examples:
+- (Capital(Russia) == Moscow)
+- (Price (Cretain Car) == x7)
+
+p.82 of the book
+
+### The ways of constructing compound designations of objects and sets from compound designations of notions
